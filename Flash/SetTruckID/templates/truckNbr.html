@@ -1,0 +1,16 @@
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Trucknet Configuration</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}" />
+    </head>
+    <body>
+        <form action = "http://localhost:8080/recordTruck/" method="POST">
+            <header id="truck">Truck Number</header>
+            <label>Enter Truck Number Below</label>
+            <input type="number" name="truckNbr">
+            <div class="help">Use numbers only</div>
+            <button id="addTruck">Submit</button>
+        </form>
+    </body>
+</html>

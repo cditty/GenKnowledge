@@ -1,0 +1,16 @@
+Turn on wifi and cellular connections via command line.
+
+Turn on Wi-fi
+netsh interface set interface wifi enable
+
+Turn off Wi-fi
+netsh interface set interface wifi disable
+
+Turn on Cellular
+netsh mbn set powerstate interface="cellular" state=on
+
+Turn off Cellular
+netsh mbn set powerstate interface="cellular" state=off
+
+Add wifi profile for connecting
+netsh wlan add profile filename="C:\Users\cditty\Downloads\Wi-Fi-CIS1.xml" interface="wi-fi" user=all

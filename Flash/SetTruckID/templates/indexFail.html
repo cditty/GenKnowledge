@@ -1,0 +1,16 @@
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Trucknet Configuration</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}" />
+    </head>
+    <body>
+        <form action = "http://localhost:8080/login/" method="POST">
+            <header>Login - Invalid Password</header>
+            <label>Password <span>*</span></label>
+            <input type="password" name="password" />
+            <div class="help">Use upper and lowercase lettes as well</div>
+            <button>Login</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+
+
+Grab screenshot
+ffmpeg -ss 1:45 -i Recloser_5-2-2018.mp4 -vframes 1 -q:v 2 Recloser_5-2-2018.mp4.jpg
+
+Convert to mp4
+ffmpeg -i Field_Regulator_Operation.mp4  -profile:v baseline -level 3.0 -s 640x360 -start_number 0 -hls_time 10 -hls_list_size 0 -f hls FieldRegualtion.m3u8
+
+Find video Length
+ffmpeg -i VistaUndergroundSwitchgear.mp4 2>&1 | grep Duration | awk '{print $2}' | tr -d ,
+
+
+
+handbrakeCLI -i '/Users/a002902/Desktop/Safety Video/VistaUndergroundSwitchgear.m4v' -o '/Users/a002902/Desktop/Safety Video/VistaUndergroundSwitchgear.mp4' --format av_mp4 --align-av --markers --optimize -encoder mpeg4 --rate 30 --quality 22 --encoder-tune none --encoder-profile main --encoder-level 3.1 --mixdown stereo --gain 0 --drc 0 --audio 0 --aencoder ca_aac --ab 160 --arate 160 --subtitle none 
